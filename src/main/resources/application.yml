@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: test-netrebin
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: dev
+    password: dev
+    url: jdbc:postgresql://localhost:5432/dev_mem

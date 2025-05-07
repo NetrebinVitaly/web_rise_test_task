@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+
+  app:
+    container_name: app
+    build: ./
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgresqldb
+
+  postgresqldb:
+    container_name: postgresqldb
+    image: postgres:15
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: dev_mem
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: dev
