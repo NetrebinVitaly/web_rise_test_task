@@ -11,13 +11,6 @@ pipeline {
                       image: gradle:jdk17-alpine
                       command: ['cat']
                       tty: true
-                      volumeMounts:
-                        - name: gradle-cache
-                          mountPath: /home/gradle/.gradle
-                    volumes:
-                        - name: gradle-cache
-                          persistentVolumeClaim:
-                            claimName: gradle-cache-pvc
                 """
         }
     }
