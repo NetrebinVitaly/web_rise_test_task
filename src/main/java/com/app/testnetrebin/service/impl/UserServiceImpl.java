@@ -64,6 +64,7 @@ public class UserServiceImpl implements UserService {
         User user = getUserById(userId);
 
         user.getSubscriptions().add(subscription);
+        subscription.setUser(user);
         return userRepository.save(user);
     }
 

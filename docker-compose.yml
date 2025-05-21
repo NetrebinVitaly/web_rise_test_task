@@ -12,7 +12,7 @@ services:
 
   postgresqldb:
     container_name: postgresqldb
-    image: postgres:15
+    image: postgres:16-alpine
     restart: always
     ports:
       - "5432:5432"

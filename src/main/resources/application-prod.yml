@@ -2,13 +2,13 @@ spring:
   application:
     name: test-netrebin
   datasource:
-    url: jdbc:postgresql://localhost:5432/dev_mem
+    url: jdbc:postgresql://postgresqldb:5432/dev_mem
     username: dev
     password: dev
     driver-class-name: org.postgresql.Driver
 
   flyway:
-    url: jdbc:postgresql://localhost:5432/dev_mem
+    url: jdbc:postgresql://postgresqldb:5432/dev_mem
     user: dev
     password: dev
     enabled: true
